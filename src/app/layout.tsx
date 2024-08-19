@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body
-        className={`flex min-h-full bg-zinc-100 antialiased dark:bg-zinc-900 ${inter.className}`}
+        className={`flex min-h-full bg-zinc-100 antialiased dark:bg-zinc-950 ${inter.className}`}
       >
         {children}
       </body>
