@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import InternalLayout from "@/components/InternalLayout";
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import InternalLayout from '@/components/InternalLayout';
 
 export default function VenueMapPage() {
   return (
@@ -30,7 +30,7 @@ export default function VenueMapPage() {
         </div>
         <Link
           href="/"
-          className="mt-4 inline-block text-orange-600 hover:underline"
+          className="mt-4 inline-block text-yellow-600 hover:underline"
         >
           Volver al Inicio
         </Link>

@@ -45,7 +45,7 @@ export default function SpeakerPage({ params }: { params: { id: string } }) {
         <h1 className="text-3xl font-bold mb-2">{speaker.name}</h1>
         <h2 className="text-xl text-gray-600 mb-4">{speaker.topic}</h2>
         <p className="text-gray-800 mb-6">{speaker.bio}</p>
-        <Link href="/speakers" className="text-orange-600 hover:underline">
+        <Link href="/speakers" className="text-yellow-600 hover:underline">
           Back to Speakers
         </Link>
       </div>

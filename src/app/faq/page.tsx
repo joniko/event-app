@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import Link from "next/link";
-import InternalLayout from "@/components/InternalLayout";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import InternalLayout from '@/components/InternalLayout';
 
-import { ChevronDown, ChevronUp, MessageCircle } from "lucide-react";
+import { ChevronDown, ChevronUp, MessageCircle } from 'lucide-react';
 
 type FAQ = {
   question: string;
@@ -18,47 +18,47 @@ type FAQCategory = {
 
 const faqData: FAQCategory[] = [
   {
-    category: "Información General",
+    category: 'Información General',
     faqs: [
       {
-        question: "¿Cuándo y dónde se llevará a cabo el evento?",
+        question: '¿Cuándo y dónde se llevará a cabo el evento?',
         answer:
-          "El evento se llevará a cabo del 1 al 3 de septiembre de 2023 en el Centro de Convenciones de la Ciudad.",
+          'El evento se llevará a cabo del 1 al 3 de septiembre de 2023 en el Centro de Convenciones de la Ciudad.',
       },
       {
-        question: "¿Cuál es el horario del evento?",
+        question: '¿Cuál es el horario del evento?',
         answer:
-          "El evento comienza a las 9:00 AM y termina a las 6:00 PM cada día.",
+          'El evento comienza a las 9:00 AM y termina a las 6:00 PM cada día.',
       },
     ],
   },
   {
-    category: "Entradas y Registro",
+    category: 'Entradas y Registro',
     faqs: [
       {
-        question: "¿Cómo puedo comprar entradas?",
+        question: '¿Cómo puedo comprar entradas?',
         answer:
-          "Puedes comprar entradas a través de nuestro sitio web oficial o en la taquilla del evento.",
+          'Puedes comprar entradas a través de nuestro sitio web oficial o en la taquilla del evento.',
       },
       {
-        question: "¿Hay descuentos para estudiantes?",
+        question: '¿Hay descuentos para estudiantes?',
         answer:
-          "Sí, ofrecemos un 20% de descuento para estudiantes con identificación válida.",
+          'Sí, ofrecemos un 20% de descuento para estudiantes con identificación válida.',
       },
     ],
   },
   {
-    category: "Logística",
+    category: 'Logística',
     faqs: [
       {
-        question: "¿Hay estacionamiento disponible?",
+        question: '¿Hay estacionamiento disponible?',
         answer:
-          "Sí, hay estacionamiento disponible en el lugar por una tarifa adicional.",
+          'Sí, hay estacionamiento disponible en el lugar por una tarifa adicional.',
       },
       {
-        question: "¿Se proporcionará comida durante el evento?",
+        question: '¿Se proporcionará comida durante el evento?',
         answer:
-          "Sí, habrá opciones de catering disponibles para compra durante el evento.",
+          'Sí, habrá opciones de catering disponibles para compra durante el evento.',
       },
     ],
   },
@@ -75,7 +75,7 @@ export default function FAQPage() {
   };
 
   const openWhatsApp = () => {
-    window.open("https://wa.me/1234567890", "_blank");
+    window.open('https://wa.me/1234567890', '_blank');
   };
 
   return (
@@ -86,20 +86,20 @@ export default function FAQPage() {
         </h1>
         {faqData.map((category, categoryIndex) => (
           <div key={categoryIndex} className="mb-8">
-            <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
+            <h2 className="text-xl font-semibold text-neutral-800 dark:text-neutral-200 mb-4">
               {category.category}
             </h2>
             <div className="space-y-4">
               {category.faqs.map((faq, questionIndex) => (
                 <div
                   key={questionIndex}
-                  className="bg-white shadow-md rounded-lg p-4"
+                  className="text-neutral-800 dark:text-neutral-200 rounded-xl bg-neutral-50 shadow-[0px_0px_0px_1px_rgba(9,9,11,0.07),0px_2px_2px_0px_rgba(9,9,11,0.05)] dark:bg-neutral-800 dark:shadow-[0px_0px_0px_1px_rgba(255,255,255,0.1)] dark:before:-inset-px dark:before:rounded-xl dark:before:shadow-[0px_2px_8px_0px_rgba(0,_0,_0,_0.20),_0px_1px_0px_0px_rgba(255,_255,_255,_0.06)_inset] forced-colors:outline p-4"
                 >
                   <button
                     className="flex justify-between items-center w-full text-left"
                     onClick={() => toggleAnswer(categoryIndex, questionIndex)}
                   >
-                    <h3 className="text-lg font-semibold">{faq.question}</h3>
+                    <h3 className="text-lg font-semibold ">{faq.question}</h3>
                     {openAnswers[`${categoryIndex}-${questionIndex}`] ? (
                       <ChevronUp />
                     ) : (
@@ -123,7 +123,7 @@ export default function FAQPage() {
         </button>
         <Link
           href="/"
-          className="mt-4 inline-block text-orange-600 hover:underline"
+          className="mt-4 inline-block text-yellow-600 hover:underline"
         >
           Volver al Inicio
         </Link>

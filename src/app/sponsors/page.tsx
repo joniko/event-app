@@ -1,12 +1,12 @@
-import React from "react";
-import Link from "next/link";
-import InternalLayout from "@/components/InternalLayout";
+import React from 'react';
+import Link from 'next/link';
+import InternalLayout from '@/components/InternalLayout';
 
 // Mock data for sponsors
 const sponsors = [
-  { id: 1, name: "Acme Corp", tier: "Gold", logo: "/acme-logo.png" },
-  { id: 2, name: "TechStart", tier: "Silver", logo: "/techstart-logo.png" },
-  { id: 3, name: "InnovateCo", tier: "Bronze", logo: "/innovateco-logo.png" },
+  { id: 1, name: 'Acme Corp', tier: 'Gold', logo: '/acme-logo.png' },
+  { id: 2, name: 'TechStart', tier: 'Silver', logo: '/techstart-logo.png' },
+  { id: 3, name: 'InnovateCo', tier: 'Bronze', logo: '/innovateco-logo.png' },
 ];
 
 export default function SponsorsPage() {
@@ -31,7 +31,7 @@ export default function SponsorsPage() {
         </div>
         <Link
           href="/"
-          className="mt-8 inline-block text-orange-600 hover:underline"
+          className="mt-8 inline-block text-yellow-600 hover:underline"
         >
           Back to Home
         </Link>

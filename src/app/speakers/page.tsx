@@ -1,26 +1,26 @@
-import React from "react";
-import Link from "next/link";
-import InternalLayout from "@/components/InternalLayout";
+import React from 'react';
+import Link from 'next/link';
+import InternalLayout from '@/components/InternalLayout';
 
 // Mock data for speakers
 const speakers = [
   {
     id: 1,
-    name: "Jane Doe",
-    topic: "Future of AI",
-    image: "/speakers/jane-doe.jpg",
+    name: 'Jane Doe',
+    topic: 'Future of AI',
+    image: '/speakers/jane-doe.jpg',
   },
   {
     id: 2,
-    name: "John Smith",
-    topic: "Blockchain Revolution",
-    image: "/speakers/erhart-cockrin.jpg",
+    name: 'John Smith',
+    topic: 'Blockchain Revolution',
+    image: '/speakers/erhart-cockrin.jpg',
   },
   {
     id: 3,
-    name: "Alice Johnson",
-    topic: "Cybersecurity Trends",
-    image: "/speakers/erhart-cockrin.jpg",
+    name: 'Alice Johnson',
+    topic: 'Cybersecurity Trends',
+    image: '/speakers/erhart-cockrin.jpg',
   },
 ];
 
@@ -48,7 +48,7 @@ export default function SpeakersPage() {
         </div>
         <Link
           href="/"
-          className="mt-8 inline-block text-orange-600 hover:underline"
+          className="mt-8 inline-block text-yellow-600 hover:underline"
         >
           Back to Home
         </Link>

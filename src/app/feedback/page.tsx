@@ -1,6 +1,6 @@
-import React from "react";
-import Link from "next/link";
-import InternalLayout from "@/components/InternalLayout";
+import React from 'react';
+import Link from 'next/link';
+import InternalLayout from '@/components/InternalLayout';
 
 export default function FeedbackPage() {
   return (
@@ -42,14 +42,14 @@ export default function FeedbackPage() {
           </div>
           <button
             type="submit"
-            className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"
+            className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded"
           >
             Enviar Feedback
           </button>
         </form>
         <Link
           href="/"
-          className="mt-4 inline-block text-orange-600 hover:underline"
+          className="mt-4 inline-block text-yellow-600 hover:underline"
         >
           Volver al Inicio
         </Link>
