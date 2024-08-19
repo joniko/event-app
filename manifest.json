@@ -1,11 +1,18 @@
 {
-  "name": "Cumbre",
-  "short_name": "Cumbre",
-  "description": "Una descripción de mi aplicación PWA",
+  "id": "eventik",
+  "name": "Eventik",
+  "short_name": "Eventik",
+  "description": "Encontrá toda la información sobre Nombre_Evento",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#591AFF",
   "theme_color": "#3E12B3",
+  "scope": "/",
+  "lang": "es",
+  "prefer_related_applications": false,
+  "orientation": "portrait",
+  "categories": ["event", "news"],
+
   "icons": [
     {
       "src": "/icon-192x192.png",
