@@ -56,8 +56,10 @@ export default function VenueMapPage() {
 
   return (
     <InternalLayout>
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6 text-center">Mapa del Venue</h1>
+      <div className="container mx-auto py-4">
+        <h1 className="text-2xl font-bold text-yellow-950 dark:text-yellow-50 mt-4 mb-4">
+          Mapa del Venue
+        </h1>
         <InteractiveVenueMap svgUrl={mapSvgUrl} />
 
         {/* ... (el resto del código permanece igual) */}
