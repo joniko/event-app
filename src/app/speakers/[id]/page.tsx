@@ -36,14 +36,16 @@ export default function SpeakerPage({ params }: { params: { id: string } }) {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="bg-white shadow-md rounded-lg p-6">
+      <div className="bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50 shadow-md rounded-lg p-6">
         <img
           src={speaker.image}
           alt={speaker.name}
           className="w-full h-64 object-cover rounded-md mb-6"
         />
         <h1 className="text-3xl font-bold mb-2">{speaker.name}</h1>
-        <h2 className="text-xl text-gray-600 mb-4">{speaker.topic}</h2>
+        <h2 className="text-xl text-neutral-600 dark:text-neutral-400 mb-4">
+          {speaker.topic}
+        </h2>
         <p className="text-gray-800 mb-6">{speaker.bio}</p>
         <Link href="/speakers" className="text-yellow-600 hover:underline">
           Back to Speakers

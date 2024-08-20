@@ -34,14 +34,16 @@ export default function SpeakersPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {speakers.map((speaker) => (
             <Link href={`/speakers/${speaker.id}`} key={speaker.id}>
-              <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div className="bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50 shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <img
                   src={speaker.image}
                   alt={speaker.name}
                   className="w-full h-48 object-cover rounded-md mb-4"
                 />
                 <h2 className="text-xl font-semibold">{speaker.name}</h2>
-                <p className="text-gray-600">{speaker.topic}</p>
+                <p className="text-neutral-600 dark:text-neutral-400">
+                  {speaker.topic}
+                </p>
               </div>
             </Link>
           ))}

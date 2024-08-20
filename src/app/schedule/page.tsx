@@ -47,7 +47,7 @@ const scheduleData: ScheduleDay[] = [
         id: '4',
         time: '15:00 - 16:00',
         speaker: 'Bob Brown',
-        speakerImage: '/speakers/bob-brown.jpg',
+        speakerImage: '/speakers/steven-mchail.jpg',
       },
     ],
   },
@@ -62,7 +62,7 @@ const scheduleData: ScheduleDay[] = [
         title: 'Blockchain: Beyond Cryptocurrency',
         isHighlight: true,
         detailLink: '/talks/6',
-        speakerImage: '/speakers/david-green.jpg',
+        speakerImage: '/speakers/andrew-greene.jpg',
         color: 'blue',
       },
       { id: '7', time: '14:00 - 15:00', speaker: 'Eve Taylor' },
@@ -92,7 +92,7 @@ const scheduleData: ScheduleDay[] = [
         id: '10',
         time: '11:00 - 12:00',
         speaker: 'Henry Clark',
-        speakerImage: '/speakers/henry-clark.jpg',
+        speakerImage: '/speakers/waylon-hyden.jpg',
       },
       { id: '11', time: '13:30 - 14:30', speaker: 'Irene Ross' },
       {
@@ -108,6 +108,17 @@ const scheduleData: ScheduleDay[] = [
     ],
   },
 ];
+
+const colorClasses = {
+  yellow:
+    'bg-yellow-100 border-yellow-500 text-yellow-600 dark:bg-yellow-900/30 dark:text-yellow-400',
+  emerald:
+    'bg-emerald-100 border-emerald-500 text-emerald-600 dark:bg-emerald-950/30 dark:text-emerald-400',
+  blue: 'bg-blue-100 border-blue-500 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400',
+  purple:
+    'bg-purple-100 border-purple-500 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400',
+  red: 'bg-red-100 border-red-500 text-red-600 dark:bg-red-900/30 dark:text-red-400',
+};
 
 export default function SchedulePage() {
   return (
@@ -133,31 +144,27 @@ export default function SchedulePage() {
                   key={talk.id}
                   className={`p-4 rounded-lg ${
                     talk.isHighlight
-                      ? `bg-${talk.color || 'yellow'}-100 border-l-4 border-${
-                          talk.color || 'yellow'
-                        }-500`
-                      : 'bg-white'
+                      ? `${
+                          colorClasses[
+                            talk.color as keyof typeof colorClasses
+                          ] || colorClasses.yellow
+                        } border-l-4`
+                      : 'bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50'
                   } flex items-center`}
                 >
                   <div className="flex-grow">
-                    <p className="text-sm text-gray-600">{talk.time}</p>
+                    <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                      {talk.time}
+                    </p>
                     <h3 className="font-semibold">{talk.speaker}</h3>
-                    {talk.title && (
-                      <p
-                        className={`text-${
-                          talk.color || 'yellow'
-                        }-600 font-medium`}
-                      >
-                        {talk.title}
-                      </p>
-                    )}
+                    {talk.title && <p className="font-medium">{talk.title}</p>}
                     {talk.isHighlight && (
                       <span
-                        className={`inline-block bg-${
-                          talk.color || 'yellow'
-                        }-500 text-${
-                          talk.color || 'yellow'
-                        }-800 text-xs px-2 py-1 rounded-full mt-2`}
+                        className={`inline-block ${
+                          colorClasses[
+                            talk.color as keyof typeof colorClasses
+                          ] || colorClasses.yellow
+                        } text-xs px-2 py-1 rounded-full mt-2`}
                       >
                         Destacada
                       </span>

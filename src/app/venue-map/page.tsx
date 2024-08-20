@@ -10,7 +10,7 @@ export default function VenueMapPage() {
         <h1 className="text-2xl font-bold text-yellow-950 dark:text-yellow-50 mt-4 mb-4">
           Mapa del Venue
         </h1>
-        <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50 shadow-lg rounded-lg overflow-hidden">
           <Image
             src="/images/venue-map.jpg"
             alt="Mapa del Venue"

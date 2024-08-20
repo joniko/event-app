@@ -146,7 +146,7 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
       className="w-full h-48 object-cover mb-4 rounded"
     />
     <h3 className="text-lg font-semibold">{product.name}</h3>
-    <p className="text-gray-600">${product.price}</p>
+    <p className="text-neutral-600 dark:text-neutral-400">${product.price}</p>
     <button className="mt-2 bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">
       Agregar al carrito
     </button>
@@ -191,13 +191,13 @@ const CategorySlider: React.FC<{ category: Category }> = ({ category }) => {
       </div>
       <button
         onClick={() => scroll('left')}
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
+        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50 rounded-full p-2 shadow-md"
       >
         <ChevronLeft />
       </button>
       <button
         onClick={() => scroll('right')}
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
+        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50 rounded-full p-2 shadow-md"
       >
         <ChevronRight />
       </button>

@@ -57,7 +57,7 @@ export default function ProgramPage() {
         <h1 className="text-2xl font-bold text-yellow-950 dark:text-yellow-50 mt-4 mb-4">
           Programa
         </h1>
-        <div className="space-y-1 rounded-md border bg-white border-yellow-800">
+        <div className="space-y-1 rounded-md border bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50 border-yellow-800">
           {Object.entries(program).map(([day, schedule]) => (
             <div key={day} className="mb-8">
               <h2 className="text-xl font-bold m-4 text-cumbre-purple">

@@ -1,6 +1,6 @@
-import React from "react";
-import Image from "next/image";
-import InternalLayout from "@/components/InternalLayout";
+import React from 'react';
+import Image from 'next/image';
+import InternalLayout from '@/components/InternalLayout';
 
 interface TeamMember {
   name: string;
@@ -10,39 +10,39 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   {
-    name: "Juan Pérez",
-    role: "Director",
-    imageUrl: "/api/placeholder/150/150",
+    name: 'Juan Pérez',
+    role: 'Director',
+    imageUrl: '/api/placeholder/150/150',
   },
   {
-    name: "María García",
-    role: "Coordinadora de Eventos",
-    imageUrl: "/api/placeholder/150/150",
+    name: 'María García',
+    role: 'Coordinadora de Eventos',
+    imageUrl: '/api/placeholder/150/150',
   },
   {
-    name: "Carlos Rodríguez",
-    role: "Líder de Alabanza",
-    imageUrl: "/api/placeholder/150/150",
+    name: 'Carlos Rodríguez',
+    role: 'Líder de Alabanza',
+    imageUrl: '/api/placeholder/150/150',
   },
   {
-    name: "Ana Martínez",
-    role: "Coordinadora de Voluntarios",
-    imageUrl: "/api/placeholder/150/150",
+    name: 'Ana Martínez',
+    role: 'Coordinadora de Voluntarios',
+    imageUrl: '/api/placeholder/150/150',
   },
   {
-    name: "Luis Sánchez",
-    role: "Encargado de Logística",
-    imageUrl: "/api/placeholder/150/150",
+    name: 'Luis Sánchez',
+    role: 'Encargado de Logística',
+    imageUrl: '/api/placeholder/150/150',
   },
   {
-    name: "Elena Torres",
-    role: "Coordinadora de Talleres",
-    imageUrl: "/api/placeholder/150/150",
+    name: 'Elena Torres',
+    role: 'Coordinadora de Talleres',
+    imageUrl: '/api/placeholder/150/150',
   },
 ];
 
 const TeamMemberCard: React.FC<TeamMember> = ({ name, role, imageUrl }) => (
-  <div className="flex flex-col items-center p-4 bg-white rounded-lg shadow-md">
+  <div className="flex flex-col items-center p-4 bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50 rounded-lg shadow-md">
     <Image
       src={imageUrl}
       alt={name}
@@ -63,7 +63,7 @@ export default function TeamPage() {
           Nuestro Equipo
         </h1>
 
-        <section className="mb-8 bg-white p-6 rounded-lg shadow-md">
+        <section className="mb-8 bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50 p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-semibold text-yellow-800 mb-4">
             Quiénes Somos
           </h2>

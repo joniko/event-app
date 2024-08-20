@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo } from 'react';
 
 import {
   useReactTable,
@@ -10,7 +10,7 @@ import {
   SortingState,
   VisibilityState,
   flexRender,
-} from "@tanstack/react-table";
+} from '@tanstack/react-table';
 import {
   Table,
   TableBody,
@@ -18,11 +18,11 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
-import { DataTableToolbar } from "./DataTableToolbar";
-import { DataTablePagination } from "./DataTablePagination";
-import { DataTableColumnHeader } from "./DataTableColumnHeader";
-import { Ticket } from "@/types"; // Importa el tipo Ticket desde el archivo compartido
+} from '@/components/ui/table';
+import { DataTableToolbar } from './DataTableToolbar';
+import { DataTablePagination } from './DataTablePagination';
+import { DataTableColumnHeader } from './DataTableColumnHeader';
+import { Ticket } from '@/types'; // Importa el tipo Ticket desde el archivo compartido
 
 interface EventTableProps {
   data: Ticket[];
@@ -30,10 +30,10 @@ interface EventTableProps {
 }
 
 export function EventTable({ data, hiddenColumns = [] }: EventTableProps) {
-  const [globalFilter, setGlobalFilter] = useState("");
+  const [globalFilter, setGlobalFilter] = useState('');
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const [sorting, setSorting] = useState<SortingState>([
-    { id: "Apellido", desc: false },
+    { id: 'Apellido', desc: false },
   ]);
   const [columnVisibility, setColumnVisibility] = useState<VisibilityState>(
     () =>
@@ -87,7 +87,7 @@ export function EventTable({ data, hiddenColumns = [] }: EventTableProps) {
       pagination: {
         pageSize: 20,
       },
-      sorting: [{ id: "Apellido", desc: false }],
+      sorting: [{ id: 'Apellido', desc: false }],
     },
   });
 
@@ -98,7 +98,7 @@ export function EventTable({ data, hiddenColumns = [] }: EventTableProps) {
         globalFilter={globalFilter}
         setGlobalFilter={setGlobalFilter}
       />
-      <div className="rounded-md border bg-white border-yellow-800">
+      <div className="rounded-md border bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50 border-yellow-800">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (

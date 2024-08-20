@@ -63,7 +63,7 @@ export default function TalkDetailPage({ params }: { params: { id: string } }) {
       >
         &larr; Volver al Programa
       </Link>
-      <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+      <div className="bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50 shadow-lg rounded-lg overflow-hidden">
         <div className="md:flex">
           <div className="md:flex-shrink-0">
             <Image
