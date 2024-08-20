@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <main className="container flex flex-col items-center px-4 mx-auto max-w-5xl">
       <WavyBackground />
-      <div className="grid gap-4 grid-cols-3 md:grid-cols-4 mt-8">
+      <div className="grid gap-2 grid-cols-3 md:grid-cols-4 mt-8">
         {navigationItems.map(({ icon: Icon, text, href }) => (
           <Link
             key={href}
