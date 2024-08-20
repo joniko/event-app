@@ -11,7 +11,7 @@ import {
   Info,
   Users,
   Utensils,
-  FirstAid,
+  Ambulance,
   Wifi,
 } from 'lucide-react';
 
@@ -46,7 +46,7 @@ const serviceAreas = [
   { name: 'Tienda de Merchandise', icon: ShoppingBag },
   { name: 'Punto de Información', icon: Info },
   { name: 'Zona de Networking', icon: Users },
-  { name: 'Primeros Auxilios', icon: FirstAid },
+  { name: 'Primeros Auxilios', icon: Ambulance },
   { name: 'Zona WiFi', icon: Wifi },
 ];
 
@@ -62,7 +62,42 @@ export default function VenueMapPage() {
         </h1>
         <InteractiveVenueMap svgUrl={mapSvgUrl} />
 
-        {/* ... (el resto del código permanece igual) */}
+        <div className="mt-12">
+          <h2 className="text-2xl font-semibold mb-4">Áreas de Servicio</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {serviceAreas.map((service) => (
+              <div
+                key={service.name}
+                className="flex items-center p-3 bg-white dark:bg-gray-800 rounded-lg shadow-sm"
+              >
+                <service.icon className="w-6 h-6 mr-3 text-indigo-600 dark:text-indigo-400" />
+                <span>{service.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-12">
+          <h2 className="text-2xl font-semibold mb-4">Pabellones</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {pavilions.map((pavilion) => (
+              <div
+                key={pavilion.id}
+                className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md"
+              >
+                <h3 className="text-lg font-semibold mb-2">{pavilion.name}</h3>
+                <p>{pavilion.type}</p>
+                {pavilion.areas && (
+                  <ul className="mt-2 text-sm">
+                    {pavilion.areas.map((area) => (
+                      <li key={area}>{area}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </InternalLayout>
   );
