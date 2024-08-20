@@ -17,8 +17,7 @@ import {
 } from 'lucide-react';
 
 const navigationItems = [
-  { icon: Calendar, text: 'Programa', href: '/program' },
-  { icon: MapPin, text: 'Ubicaciones', href: '/locations' },
+  { icon: Calendar, text: 'Cronograma', href: '/schedule' },
   { icon: Mic2, text: 'Oradores', href: '/speakers' },
   { icon: BookOpen, text: 'Talleres', href: '/workshops' },
   { icon: Users, text: 'Auspiciantes', href: '/sponsors' },
@@ -27,7 +26,6 @@ const navigationItems = [
   { icon: MessageSquare, text: 'FAQ', href: '/faq' },
   { icon: ThumbsUp, text: 'Feedback', href: '/feedback' },
   { icon: Newspaper, text: 'Noticias', href: '/news-feed' },
-  { icon: Calendar, text: 'Cronograma', href: '/schedule' },
   { icon: Store, text: 'Tienda', href: '/store' },
   { icon: Star, text: 'Equipo', href: '/team' },
   { icon: Map, text: 'Mapa del Venue', href: '/venue-map' },

@@ -1,39 +1,66 @@
+'use client';
+
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+
 import InternalLayout from '@/components/InternalLayout';
+import InteractiveVenueMap from '@/components/InteractiveVenueMap';
+import {
+  MapPin,
+  Coffee,
+  ShoppingBag,
+  Info,
+  Users,
+  Utensils,
+  FirstAid,
+  Wifi,
+} from 'lucide-react';
+
+const pavilions = [
+  { id: 1, name: 'Pabellón A', type: 'Auditorio' },
+  {
+    id: 2,
+    name: 'Pabellón B',
+    type: 'Mixto',
+    areas: ['Baños', 'Comedor', 'Merch'],
+  },
+  { id: 3, name: 'Pabellón C', type: 'Auditorio' },
+  {
+    id: 4,
+    name: 'Pabellón D',
+    type: 'Mixto',
+    areas: ['Baños', 'Comedor', 'Merch'],
+  },
+  {
+    id: 5,
+    name: 'Pabellón E',
+    type: 'Central',
+    areas: ['Acreditaciones', 'Informes'],
+  },
+  { id: 6, name: 'Pabellón F', type: 'Auditorio' },
+];
+
+const serviceAreas = [
+  { name: 'Baños', icon: MapPin },
+  { name: 'Comedor', icon: Utensils },
+  { name: 'Cafetería', icon: Coffee },
+  { name: 'Tienda de Merchandise', icon: ShoppingBag },
+  { name: 'Punto de Información', icon: Info },
+  { name: 'Zona de Networking', icon: Users },
+  { name: 'Primeros Auxilios', icon: FirstAid },
+  { name: 'Zona WiFi', icon: Wifi },
+];
 
 export default function VenueMapPage() {
+  // Reemplaza esta URL con la ruta a tu archivo SVG del mapa
+  const mapSvgUrl = '/path/to/your/venue-map.svg';
+
   return (
     <InternalLayout>
-      <div className="container mx-auto py-4">
-        <h1 className="text-2xl font-bold text-yellow-950 dark:text-yellow-50 mt-4 mb-4">
-          Mapa del Venue
-        </h1>
-        <div className="bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50 shadow-lg rounded-lg overflow-hidden">
-          <Image
-            src="/images/venue-map.jpg"
-            alt="Mapa del Venue"
-            width={1200}
-            height={800}
-            className="w-full h-auto"
-          />
-          <div className="p-4">
-            <h2 className="text-xl font-semibold mb-2">Leyenda</h2>
-            <ul className="list-disc list-inside">
-              <li>Área A: Salas de Conferencias</li>
-              <li>Área B: Zona de Exposiciones</li>
-              <li>Área C: Área de Networking</li>
-              <li>Área D: Restaurantes y Cafeterías</li>
-            </ul>
-          </div>
-        </div>
-        <Link
-          href="/"
-          className="mt-4 inline-block text-yellow-600 hover:underline"
-        >
-          Volver al Inicio
-        </Link>
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6 text-center">Mapa del Venue</h1>
+        <InteractiveVenueMap svgUrl={mapSvgUrl} />
+
+        {/* ... (el resto del código permanece igual) */}
       </div>
     </InternalLayout>
   );
