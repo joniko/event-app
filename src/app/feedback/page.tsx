@@ -9,7 +9,7 @@ export default function FeedbackPage() {
         <h1 className="text-2xl font-bold text-yellow-950 dark:text-yellow-50 mt-4 mb-4">
           Encuesta de Feedback
         </h1>
-        <form className="bg-white shadow-md rounded-lg p-6">
+        <form className="bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50 shadow-md rounded-lg p-6">
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"

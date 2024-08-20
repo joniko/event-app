@@ -137,7 +137,7 @@ const highlightedProducts: Product[] = [
 ];
 
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
-  <div className="bg-white shadow-md rounded-lg p-4 flex-shrink-0 w-full">
+  <div className="bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50 shadow-md rounded-lg p-4 flex-shrink-0 w-full">
     <Image
       src={product.image}
       alt={product.name}

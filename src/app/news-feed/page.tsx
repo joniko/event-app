@@ -107,7 +107,9 @@ const PostComponent: React.FC<{ post: Post }> = ({ post }) => {
         </div>
       );
     case 'Article':
-      return <p className="text-gray-700">{post.content}</p>;
+      return (
+        <p className="text-neutral-600 dark:text-neutral-300">{post.content}</p>
+      );
     case 'FeaturedArticle':
       return (
         <div className="relative">
@@ -191,7 +193,7 @@ export default function NewsFeedPage() {
               className={`px-4 py-2 rounded-full ${
                 selectedCategory === category
                   ? 'bg-yellow-500 text-white'
-                  : 'bg-gray-200'
+                  : 'bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50'
               }`}
               onClick={() => setSelectedCategory(category)}
             >
@@ -202,19 +204,26 @@ export default function NewsFeedPage() {
 
         <div className="space-y-8">
           {filteredPosts.map((post) => (
-            <div key={post.id} className="bg-white shadow-md rounded-lg p-6">
-              <div className="flex items-center mb-4">
+            <div
+              key={post.id}
+              className="rounded-xl bg-neutral-50 shadow-[0px_0px_0px_1px_rgba(9,9,11,0.07),0px_2px_2px_0px_rgba(9,9,11,0.05)] dark:bg-neutral-800 dark:shadow-[0px_0px_0px_1px_rgba(255,255,255,0.1)] dark:before:-inset-px dark:before:rounded-xl dark:before:shadow-[0px_2px_8px_0px_rgba(0,_0,_0,_0.20),_0px_1px_0px_0px_rgba(255,_255,_255,_0.06)_inset] forced-colors:outline p-6"
+            >
+              <div className="flex items-center mb-4 text-yellow-600">
                 {post.type === 'Video' && <PlayCircle className="mr-2" />}
                 {post.type === 'Article' && <Newspaper className="mr-2" />}
                 {post.type === 'FeaturedArticle' && <Star className="mr-2" />}
                 {post.type === 'Spotify' && <Music className="mr-2" />}
                 {post.type === 'YouTube' && <Youtube className="mr-2" />}
                 {post.type === 'Link' && <LinkIcon className="mr-2" />}
-                <h2 className="text-xl font-semibold">{post.title}</h2>
+                <h2 className="text-xl font-semibold text-neutral-800 dark:text-neutral-200">
+                  {post.title}
+                </h2>
               </div>
               <PostComponent post={post} />
               {post.supportText && (
-                <p className="mt-4 text-gray-600">{post.supportText}</p>
+                <p className="mt-4 text-neutral-600 dark:text-neutral-300">
+                  {post.supportText}
+                </p>
               )}
             </div>
           ))}
