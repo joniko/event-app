@@ -2,8 +2,8 @@ import React from 'react';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
-import SplashLoading from '../components/SplashLoading';
-import ServiceWorker from '../components/ServiceWorker';
+import SplashLoading from '@/components/SplashLoading';
+import ServiceWorker from '@/components/ServiceWorker';
 
 const inter = Inter({ subsets: ['latin'] });
 

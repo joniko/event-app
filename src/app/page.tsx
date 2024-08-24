@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { TransitionLink } from '@/components/TransitionLink';
 import WavyBackground from '@/components/WavyBackground';
 import {
   Calendar,
@@ -36,7 +36,7 @@ export default function Home() {
       <WavyBackground />
       <div className="grid gap-2 grid-cols-3 md:grid-cols-4 mt-8">
         {navigationItems.map(({ icon: Icon, text, href }) => (
-          <Link
+          <TransitionLink
             key={href}
             href={href}
             className="flex flex-col text-base md:text-lg items-center justify-center w-32 md:w-40 h-32 md:h-40 rounded-xl bg-neutral-50 dark:bg-neutral-800 shadow-[0px_0px_0px_1px_rgba(9,9,11,0.07),0px_2px_2px_0px_rgba(9,9,11,0.05)] dark:shadow-[0px_0px_0px_1px_rgba(255,255,255,0.1)] dark:before:-inset-px dark:before:rounded-xl dark:before:shadow-[0px_2px_8px_0px_rgba(0,_0,_0,_0.20),_0px_1px_0px_0px_rgba(255,_255,_255,_0.06)_inset] forced-colors:outline hover:bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50 dark:hover:bg-neutral-700 transition-colors duration-200"
@@ -45,7 +45,7 @@ export default function Home() {
             <span className="mt-2 text-sm md:text-base font-semibold text-yellow-950 dark:text-yellow-50 text-center">
               {text}
             </span>
-          </Link>
+          </TransitionLink>
         ))}
       </div>
     </main>
