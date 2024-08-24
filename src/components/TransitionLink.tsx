@@ -15,11 +15,9 @@ function sleep(ms: number): Promise<void> {
 }
 
 export async function handleTransition(
-  e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
   href: string,
   router: ReturnType<typeof useRouter>,
 ) {
-  e.preventDefault();
   const body = document.querySelector('body');
 
   body?.classList.add('page-transition');
@@ -39,7 +37,14 @@ export const TransitionLink: React.FC<TransitionLinkProps> = ({
   const router = useRouter();
 
   return (
-    <Link {...props} href={href} onClick={(e) => handleTransition(e, href, router)}>
+    <Link
+      {...props}
+      href={href}
+      onClick={(e) => {
+        e.preventDefault();
+        handleTransition(href, router)
+      }}
+    >
       {children}
     </Link>
   );

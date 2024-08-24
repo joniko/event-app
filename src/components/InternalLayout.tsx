@@ -15,7 +15,7 @@ export default function InternalLayout({
   return (
     <main className="container flex flex-col px-4 mx-auto max-w-2xl">
       <button
-        onClick={(e) => handleTransition(e, '/', router)}
+        onClick={() => handleTransition('/', router)}
         className="flex items-center justify-center w-10 h-10 mb-4 rounded-full text-yellow-800 bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50 transition-colors duration-200"
       >
         <ArrowLeft className="w-6 h-6" />
